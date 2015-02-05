@@ -13,6 +13,7 @@ let g:GPGDefaultRecipients=["abnerf@gmail.com"]
 call pathogen#infect('~/.vim/bundle/{}')
 call pathogen#helptags()
 
+" Jedi plugin prefs
 let g:jedi#show_call_signatures = 1
 let g:jedi#popup_on_dot = 0
 let g:jedi#auto_close_doc = 1
