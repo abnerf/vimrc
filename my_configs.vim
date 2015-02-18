@@ -38,3 +38,11 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
+
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  "hi cursorline cterm=none ctermbg=darkblue ctermfg=white
+  hi CursorLine term=bold cterm=bold guibg=Grey20 gui=NONE
+  au WinLeave * setlocal nocursorline
+augroup END
