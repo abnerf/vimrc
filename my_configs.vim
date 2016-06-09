@@ -43,7 +43,8 @@ autocmd FileType python setlocal completeopt-=preview
 augroup CursorLine
   au!
   au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-  "hi cursorline cterm=none ctermbg=darkblue ctermfg=white
+  hi CursorLine   ctermfg=NONE ctermbg=236  cterm=NONE
+  hi CursorLineNr ctermfg=117  ctermbg=NONE cterm=NONE
   hi CursorLine term=bold cterm=bold guibg=Grey20 gui=NONE
   au WinLeave * setlocal nocursorline
 augroup END
