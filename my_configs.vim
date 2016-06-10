@@ -1,4 +1,4 @@
-:au BufWinEnter *.c,*.cpp,*.cc,*.py,*.pl,*.js,*.am,*.java let w:m1=matchadd('Search', '\%<81v.\%>79v', -1)
+:au BufWinEnter *.c,*.cpp,*.cc,*.py,*.pl,*.js,*.am,*.java let w:m1=matchadd('Search', '\%<81v.\%>81v', -1)
 :au BufWinEnter *.c,*.cpp,*.cc,*.py,*.pl,*.js,*.am,*.java let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 
 autocmd BufWrite *.c,*.cpp,*.cc,*.py,*.pl,*.js,*.am,*.java :call DeleteTrailingWS()
@@ -48,6 +48,11 @@ augroup CursorLine
   hi CursorLine term=bold cterm=bold guibg=Grey20 gui=NONE
   au WinLeave * setlocal nocursorline
 augroup END
+
+" Set Max Column Limit
+au BufRead,BufNewFile *.md,*.c,*.cpp,*.cc,*.py,*.pl,*.js,*.am,*.java setlocal tw=80
+set cc=+1
+hi ColorColumn ctermbg=236 guibg=lightgrey
 
 " LightLine settings
 let g:lightline = {
