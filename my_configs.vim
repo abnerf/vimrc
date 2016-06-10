@@ -6,6 +6,8 @@ autocmd BufRead,BufNewFile *.c,*.cpp,*.cc,*.py,*.pl,*.js,*.am,*.java highlight T
 
 au FileType python inoremap # X<BS>#
 
+autocmd Filetype gitcommit setlocal spell textwidth=72
+
 "Vim GPG plugin
 let g:GPGPreferArmor=1
 let g:GPGDefaultRecipients=["abnerf@gmail.com"]
