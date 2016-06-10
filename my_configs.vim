@@ -54,6 +54,10 @@ au BufRead,BufNewFile *.md,*.c,*.cpp,*.cc,*.py,*.pl,*.js,*.am,*.java setlocal tw
 set cc=+1
 hi ColorColumn ctermbg=236 guibg=lightgrey
 
+" Search shortcuts
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>
+nnoremap <Leader>r :%s/\<<C-r><C-w>\>//g<Left><Left>
+
 " LightLine settings
 let g:lightline = {
       \ 'colorscheme': 'powerline',
@@ -76,7 +80,6 @@ let g:lightline = {
       \ 'component_type': {
       \   'syntastic': 'error',
       \ },
-      \ 'separator': { 'left': '▶', 'right': '◀'},
       \ 'subseparator': { 'left': '»', 'right': '«' }
       \ }
 
